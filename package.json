@@ -2,12 +2,12 @@
   "name": "video-stream-sample",
   "version": "1.0.0",
   "description": "Streaming video example",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": ">=6.2.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "daspinola",
   "license": "MIT",
