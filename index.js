@@ -2,6 +2,7 @@ const express = require('express')
 const fs = require('fs')
 const path = require('path')
 const app = express()
+const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -39,7 +40,7 @@ app.get('/video', function(req, res) {
     res.writeHead(206, head)
     file.pipe(res)
   } else {
-    const head = {
+    const head = {s
       'Content-Length': fileSize,
       'Content-Type': 'video/mp4',
     }
@@ -48,6 +49,6 @@ app.get('/video', function(req, res) {
   }
 })
 
-app.listen(3000, function () {
-  console.log('Listening on port 3000!')
+app.listen(port, function () {
+  console.log('Listening on port ${port}')
 })
